@@ -1,0 +1,17 @@
+.container {
+  padding: 20px;
+}
+
+.button-demo,
+.input-demo,
+.card-demo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-demo button,
+.input-demo mat-form-field,
+.card-demo mat-card {
+  margin: 10px;
+}
