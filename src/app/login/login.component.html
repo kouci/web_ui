@@ -1,0 +1,27 @@
+<div class="centered-container">
+  <mat-card class="login-card">
+    <mat-card-title class="login-title">Connexion</mat-card-title>
+
+    <mat-card-content>
+      <form class="login-form">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Entrez votre email" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Mot de passe</mat-label>
+          <input matInput type="password" placeholder="Entrez votre mot de passe" required />
+        </mat-form-field>
+
+        <div class="login-actions">
+          <button mat-raised-button color="primary" class="full-width">Se connecter</button>
+        </div>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions class="register-link">
+      <p>Pas encore de compte ? <a routerLink="/register">S'inscrire</a></p>
+    </mat-card-actions>
+  </mat-card>
+</div>

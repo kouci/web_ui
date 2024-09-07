@@ -1,0 +1,53 @@
+<nav class="sidebar">
+  <!-- Logo en haut -->
+  <div class="logo-section">
+    <h2>SHARY</h2>
+  </div>
+
+  <!-- Navigation au milieu -->
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/dashboard" routerLinkActive="active-link">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/register" routerLinkActive="active-link">
+        <mat-icon>account_circle</mat-icon>
+        <span>Profil</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/calendar" routerLinkActive="active-link">
+        <mat-icon>event</mat-icon>
+        <span>Calendrier</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/skills" routerLinkActive="active-link">
+        <mat-icon>psychology</mat-icon>
+        <span>Compétence</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/favorites" routerLinkActive="active-link">
+        <mat-icon>favorite</mat-icon>
+        <span>Favoris</span>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Déconnexion en bas -->
+  <div class="logout-section">
+    <a routerLink="/login" routerLinkActive="active-link">
+      <mat-icon>logout</mat-icon>
+      <span>Déconnecter</span>
+    </a>
+  </div>
+
+  <!-- Pied de page de la barre latérale -->
+  <div class="sidebar-footer">
+    <p>© 2024 SHARY. All rights reserved.</p>
+  </div>
+</nav>

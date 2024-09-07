@@ -1,0 +1,106 @@
+/* Style de la barre latérale */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #1e1e2f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Style de la section logo */
+.logo-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-section h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Style des liens de navigation */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-links li {
+  width: 100%;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a mat-icon {
+  font-size: 1.5rem;
+}
+
+/* Style pour l'état actif des liens */
+.nav-links li a.active-link,
+.nav-links li a:hover {
+  background-color: #29293d;
+  transform: translateX(10px);
+}
+
+/* Style de la section déconnexion */
+.logout-section {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #29293d;
+}
+
+.logout-section a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.logout-section a mat-icon {
+  font-size: 1.5rem;
+}
+
+/* Style pour l'état actif du lien de déconnexion */
+.logout-section a.active-link,
+.logout-section a:hover {
+  background-color: #29293d;
+  transform: translateX(10px);
+}
+
+/* Pied de page de la barre latérale */
+.sidebar-footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #aaa;
+}

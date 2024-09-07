@@ -1,0 +1,45 @@
+.centered-container {
+  display: flex; /* Utiliser Flexbox pour centrer */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+  background-color: #f0f0f0; /* Couleur de fond de la page (optionnelle) */
+  padding: 20px; /* Ajouter un peu de padding autour */
+  box-sizing: border-box; /* Inclure le padding dans la largeur/hauteur */
+}
+
+.login-card {
+  max-width: 500px; /* Ajuste la largeur maximale de la carte */
+  width: 100%; /* Assure que la carte s'étend sur toute la largeur disponible */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet de profondeur */
+  border-radius: 8px; /* Ajoute des coins arrondis */
+  background-color: white; /* Couleur de fond de la carte */
+}
+
+.bg-dark-custom {
+  background-color: #29293d
+}
+
+.login-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 45px;
+  font-size: 2rem;
+
+}
+
+.full-width {
+  width: 100%;
+}
+
+.login-actions {
+  margin-top: 20px;
+}
+
+.register-link {
+  text-align: center;
+}
