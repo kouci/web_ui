@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>Modifier les compétences</h2>
+<mat-dialog-content>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Ajouter une compétence</mat-label>
+    <input type="text" matInput [formControl]="skillControl" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addSkill($event.option.viewValue)">
+      <mat-option *ngFor="let skill of filteredSkills | async" [value]="skill">
+        {{ skill }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <!-- Liste des compétences déjà existantes -->
+  <div class="selected-skills">
+    <button *ngFor="let skill of userSkills" mat-raised-button class="selected-skill" (click)="removeSkill(skill)">
+      {{ skill }}
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Annuler</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Enregistrer</button>
+</mat-dialog-actions>

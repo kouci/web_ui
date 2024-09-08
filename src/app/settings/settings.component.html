@@ -1,0 +1,45 @@
+<div class="settings-container">
+  <h2>Paramètres</h2>
+
+  <!-- Section pour la visibilité du profil -->
+  <div class="settings-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Disponibilité</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="visibility-setting">
+          <span>État de la disponibilité :</span>
+          <mat-slide-toggle [(ngModel)]="isProfileVisible" color="primary">
+            <!-- Pas besoin d'afficher de texte ici -->
+          </mat-slide-toggle>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Section pour changer le mot de passe -->
+  <div class="settings-card">
+    <mat-card>
+
+        <p class="title_header">Modifier le mot de passe</p>
+
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Ancien mot de passe</mat-label>
+          <input matInput [(ngModel)]="oldPassword" type="password">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Nouveau mot de passe</mat-label>
+          <input matInput [(ngModel)]="newPassword" type="password">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Confirmer le nouveau mot de passe</mat-label>
+          <input matInput [(ngModel)]="confirmNewPassword" type="password">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="changePassword()">Changer le mot de passe</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>

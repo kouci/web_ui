@@ -1,0 +1,25 @@
+.full-width {
+  width: 100%;
+}
+
+.selected-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.selected-skill {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #c4c2c2;
+}
+
+.selected-skill mat-icon {
+  margin-left: 4px;
+  cursor: pointer;
+}

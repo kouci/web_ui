@@ -1,0 +1,124 @@
+<!-- Carte de profil -->
+<div class="container_profil">
+  <h2 class="title_card_section">
+    <mat-icon>person</mat-icon> <!-- Icône pour les informations personnelles -->
+    Informations personnelle
+  </h2>
+  <mat-card class="profile-card">
+    <mat-card-header>
+      <!-- Icône de modification -->
+      <button mat-icon-button class="edit-button" (click)="openEditDialog()">
+        <mat-icon>edit</mat-icon>
+      </button>
+
+      <!-- Avatar de l'utilisateur -->
+      <div mat-card-avatar class="profile-avatar">
+        <mat-icon>account_circle</mat-icon>
+        <!-- Icône de bonhomme -->
+      </div>
+
+      <!-- Informations de l'utilisateur -->
+      <mat-card-title>{{ user.name }}</mat-card-title>
+      <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <!-- Section des informations de profil -->
+      <section class="profile-section">
+        <p><strong>Nom : </strong> {{ user.name }}</p>
+        <p><strong>Email : </strong> {{ user.email }}</p>
+        <p><strong>LinkedIn : </strong>http://lien/user/profile/667898</p>
+      </section>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Carte des statistiques -->
+  <h2 class="title_card_section">
+    <mat-icon>bar_chart</mat-icon> <!-- Icône pour les statistiques -->
+    Statistiques de Formation
+  </h2>
+  <mat-card class="stats-card">
+    <mat-card-header> </mat-card-header>
+
+    <mat-card-content>
+      <section class="stats-section">
+        <div class="stats-item">
+          <mat-icon>access_time</mat-icon>
+          <!-- Icône d'horloge -->
+          <p>
+            <strong>Nombre d'heures passées en formation :</strong>
+            {{ user.trainingHours }} heures
+          </p>
+        </div>
+        <div class="stats-item">
+          <mat-icon>track_changes</mat-icon>
+          <!-- Icône de graphique -->
+          <p>
+            <strong>Nombre de matchs de compétences :</strong>
+            {{ user.skillMatches }}
+          </p>
+        </div>
+      </section>
+    </mat-card-content>
+  </mat-card>
+
+  <h2 class="title_card_section">
+    <mat-icon>school</mat-icon> <!-- Icône pour les compétences -->
+    Mes Compétences
+  </h2>
+  <mat-card class="skills-card">
+    <mat-card-content>
+      <section class="skills-section">
+        <div class="selected-skills">
+          <!-- Boutons pour chaque compétence maîtrisée -->
+          <button
+            *ngFor="let skill of user.skills"
+            mat-raised-button
+            class="selected-skill"
+          >
+            {{ skill }}
+          </button>
+        </div>
+        <!-- Bouton de modification des compétences -->
+        <!-- Icône de modification -->
+        <button
+          mat-icon-button
+          class="edit-button"
+          (click)="openEditSkillsDialog()"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </section>
+    </mat-card-content>
+  </mat-card>
+
+  <h2 class="title_card_section">
+    <mat-icon>school</mat-icon> <!-- Icône pour les compétences en cible -->
+    Compétences en Cible
+  </h2>
+  <mat-card class="skills-card">
+    <mat-card-content>
+      <section class="skills-section">
+        <div class="selected-skills">
+          <!-- Boutons pour chaque compétence maîtrisée -->
+          <button
+            *ngFor="let skill of user.skills"
+            mat-raised-button
+            class="selected-skill"
+          >
+            {{ skill }}
+          </button>
+        </div>
+        <!-- Bouton de modification des compétences -->
+        <!-- Icône de modification -->
+        <button
+          mat-icon-button
+          class="edit-button"
+          (click)="openEditSkillsDialog()"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </section>
+    </mat-card-content>
+  </mat-card>
+</div>

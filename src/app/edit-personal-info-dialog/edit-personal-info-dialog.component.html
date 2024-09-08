@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Modifier les informations personnelles</h2>
+<mat-dialog-content>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Nom</mat-label>
+    <input matInput [(ngModel)]="user.name">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="user.email">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>LinkedIn</mat-label>
+    <input matInput [(ngModel)]="user.linkedin">
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Annuler</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Enregistrer</button>
+</mat-dialog-actions>

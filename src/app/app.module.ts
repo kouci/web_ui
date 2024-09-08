@@ -10,8 +10,6 @@ import { MatListModule } from '@angular/material/list';
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete'; // Importer MatAutocompleteModule
 
-
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -20,26 +18,52 @@ import { RegisterComponent } from './register/register.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-
-
+import { ProfilComponent } from './profil/profil.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { EditPersonalInfoDialogComponent } from './edit-personal-info-dialog/edit-personal-info-dialog.component';
+import { MatTableModule } from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
+import { EditSkillsDialogComponent } from './edit-skills-dialog/edit-skills-dialog.component';
+import { SettingsComponent } from './settings/settings.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, LoginComponent, RegisterComponent,SidebarComponent, MainLayoutComponent, AuthLayoutComponent,],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    LoginComponent,
+    RegisterComponent,
+    SidebarComponent,
+    MainLayoutComponent,
+    AuthLayoutComponent,
+    ProfilComponent,
+    EditPersonalInfoDialogComponent,
+    EditSkillsDialogComponent,
+    SettingsComponent,
+
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
+    MatSlideToggleModule,
+    MatTableModule,
+    MatChipsModule,
     MatInputModule,
+    MatDialogModule,
+    FormsModule,
     MatAutocompleteModule,
     MatCardModule,
     MatFormFieldModule,
     MatSidenavModule,
+    MatDialogModule,
     MatListModule,
     MatStepperModule,
     ReactiveFormsModule,

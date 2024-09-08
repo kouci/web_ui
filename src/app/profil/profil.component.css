@@ -1,0 +1,164 @@
+.container_profil {
+  margin: 0 auto;
+  display: flex;
+  margin-left: 170px;
+  margin-top: 60px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card,
+.stats-card,
+.skills-card {
+  width: 70%;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Pour positionner l'icône de modification */
+  /* Ajoute une marge gauche pour pousser les cartes vers la droite */
+  margin-left: 30px;
+}
+
+/* Ajuste la largeur des cartes pour les écrans plus petits */
+@media (max-width: 1200px) {
+  .profile-card,
+  .stats-card,
+  .skills-card {
+    max-width: 100%;
+  }
+}
+
+/* Ajuste la largeur des cartes pour les écrans très petits */
+@media (max-width: 768px) {
+  .profile-card,
+  .stats-card,
+  .skills-card {
+    max-width: 100%;
+    margin-left: 0; /* Retire le décalage à droite pour les petits écrans */
+  }
+}
+
+.profile-avatar {
+  background-color: #3f51b5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+
+.edit-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+mat-chip {
+  background-color: #e0e0e0;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Nouvelle carte pour les statistiques */
+.stats-section {
+  margin-bottom: 20px;
+}
+
+.stats-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stats-item mat-icon {
+  margin-bottom: 14px;
+}
+
+.title_card_section {
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+mat-icon {
+  font-size: 24px;
+
+}
+
+.skills-card {
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.selected-skills {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux boutons de sauter à la ligne si nécessaire */
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.selected-skill {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #c4c2c2;
+  margin-top: -30px;
+  margin-bottom: 15px;
+}
+
+.selected-skill mat-icon {
+  margin-left: 4px; /* Espacement entre le texte du bouton et l'icône */
+}
+
+.edit-skills-button {
+  align-self: flex-start; /* Place le bouton en haut à droite */
+  margin-left: auto; /* Place le bouton tout à droite */
+}
+
+@media (max-width: 1200px) {
+  .profile-card,
+  .stats-card,
+  .skills-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-card,
+  .stats-card,
+  .skills-card {
+    max-width: 100%;
+    margin-left: 0; /* Retire le décalage à droite pour les petits écrans */
+  }
+}
