@@ -34,6 +34,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { HttpClientModule } from '@angular/common/http'; 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CompetencesComponent } from './competences/competences.component';
 
 
 
@@ -50,6 +51,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     EditPersonalInfoDialogComponent,
     EditSkillsDialogComponent,
     SettingsComponent,
+    CompetencesComponent,
 
   ],
   imports: [

@@ -1,0 +1,64 @@
+<div class="competences-container">
+  <h2>Page des Compétences</h2>
+
+  <!-- Barre de recherche et bouton filtre -->
+  <div class="search-filter-bar">
+    <mat-form-field appearance="outline" class="search-bar">
+      <mat-label>Rechercher des compétences</mat-label>
+      <input matInput placeholder="Rechercher" [(ngModel)]="searchQuery">
+      <button mat-icon-button matSuffix aria-label="Search">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="filter-button">
+      <mat-icon>filter_list</mat-icon> Filtrer
+    </button>
+  </div>
+
+  <!-- Section pour les compétences recherchées -->
+  <div class="competences-section">
+    <h3>Compétences Recherchées</h3>
+    <div class="competences-cards">
+      <mat-card *ngFor="let competence of competencesRecherchees" class="competence-card">
+        <mat-card-header class="card-header-competences">
+          <mat-card-title>{{ competence.titre }}</mat-card-title>
+          <mat-icon class="match-icon" color="primary">compare_arrows</mat-icon>
+        </mat-card-header>
+
+        <div mat-card-avatar class="profile-avatar">
+          <mat-icon>account_circle</mat-icon>
+        </div>
+
+        <mat-card-content>
+          <mat-card-subtitle>{{ competence.auteur }}</mat-card-subtitle>
+        </mat-card-content>
+
+        <mat-card-footer class="card-footer">
+          <mat-icon color="primary">favorite_border</mat-icon>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Section pour les compétences disponibles -->
+  <div class="competences-section">
+    <h3>Compétences Disponibles</h3>
+    <div class="competences-cards">
+      <mat-card *ngFor="let competence of competencesDisponibles" class="competence-card">
+        <mat-card-header class="card-header-competences">
+          <mat-card-title>{{ competence.titre }}</mat-card-title>
+          <mat-icon class="match-icon" color="primary">compare_arrows</mat-icon>
+        </mat-card-header>
+
+        <mat-card-content>
+          <mat-card-subtitle>Auteur : {{ competence.auteur }}</mat-card-subtitle>
+        </mat-card-content>
+
+        <mat-card-footer class="card-footer">
+          <mat-icon color="primary">favorite_border</mat-icon>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</div>

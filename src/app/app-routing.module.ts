@@ -7,6 +7,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { ProfilComponent } from './profil/profil.component';
 import { SettingsComponent } from './settings/settings.component';
+import { CompetencesComponent } from './competences/competences.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'profil', component: ProfilComponent },
       { path: 'settings', component: SettingsComponent },
+      { path: 'competences', component: CompetencesComponent },
       // Ajoute ici d'autres routes nécessitant le MainLayout
     ],
   },

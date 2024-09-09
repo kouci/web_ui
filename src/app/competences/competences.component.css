@@ -1,0 +1,97 @@
+/* Container principal */
+.competences-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 170px;
+  margin-top: 60px;
+}
+
+/* Barre de recherche et bouton filtre */
+.search-filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px; /* Ajuste selon tes besoins */
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  flex: 1;
+}
+
+.filter-button {
+  margin-left: 16px;
+}
+
+/* Section des compétences */
+.competences-section {
+  margin-bottom: 40px;
+}
+
+/* Conteneur des cartes */
+.competences-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centrer les cartes */
+}
+
+/* Carte de compétence */
+.competence-card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pour espacer le footer en bas */
+}
+
+/* En-tête de carte */
+.card-header-competences {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Contenu de l'en-tête */
+.card-header-content {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacement entre l'icône et le texte */
+}
+
+/* Icône du profil */
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px; /* Taille de l'icône de l'auteur */
+  color: #3f51b5; /* Couleur de l'icône */
+  margin-right: 10px; /* Espacement à droite de l'icône */
+}
+
+/* Texte de l'en-tête */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Icône de correspondance */
+.match-icon {
+  font-size: 24px; /* Taille de l'icône de match */
+  color: #3f51b5; /* Couleur de l'icône */
+  cursor: pointer;
+}
+
+/* Pied de carte */
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.card-footer mat-icon {
+  font-size: 24px; /* Taille de l'icône de cœur */
+}
