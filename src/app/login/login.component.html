@@ -3,19 +3,19 @@
     <mat-card-title class="login-title">Connexion</mat-card-title>
 
     <mat-card-content>
-      <form class="login-form">
+      <form class="login-form" [formGroup]="loginForm">
         <mat-form-field appearance="outline" class="full-width">
-          <mat-label>Email</mat-label>
-          <input matInput type="email" placeholder="Entrez votre email" required />
+          <mat-label>Login</mat-label>
+          <input matInput type="text" formControlName="login" placeholder="Entrez votre login" required />
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Mot de passe</mat-label>
-          <input matInput type="password" placeholder="Entrez votre mot de passe" required />
+          <input matInput type="password" formControlName="password" placeholder="Entrez votre mot de passe" required />
         </mat-form-field>
 
         <div class="login-actions">
-          <button mat-raised-button color="primary" class="full-width">Se connecter</button>
+          <button mat-raised-button color="primary" class="full-width" (click)="authentificate()">Se connecter</button>
         </div>
       </form>
     </mat-card-content>

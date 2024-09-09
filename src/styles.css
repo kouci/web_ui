@@ -8,3 +8,13 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.snackbar-success {
+  background-color: #4caf50; /* Couleur de fond pour le succès */
+  color: white; /* Couleur du texte */
+}
+
+.snackbar-error {
+  background-color: #f44336; /* Couleur de fond pour l'erreur */
+  color: white; /* Couleur du texte */
+}

@@ -32,6 +32,10 @@ import { EditSkillsDialogComponent } from './edit-skills-dialog/edit-skills-dial
 import { SettingsComponent } from './settings/settings.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
+import { HttpClientModule } from '@angular/common/http'; 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+
 
 @NgModule({
   declarations: [
@@ -68,6 +72,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatStepperModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

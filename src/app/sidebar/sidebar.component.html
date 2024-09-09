@@ -46,11 +46,9 @@
   </ul>
 
   <!-- Déconnexion en bas -->
-  <div class="logout-section">
-    <a routerLink="/login" routerLinkActive="active-link">
+  <div class="logout-section" (click)="logout()">
       <mat-icon>logout</mat-icon>
       <span>Déconnecter</span>
-    </a>
   </div>
 
   <!-- Pied de page de la barre latérale -->

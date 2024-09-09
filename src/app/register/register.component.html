@@ -55,7 +55,7 @@
               <input matInput [formControl]="skillsControl" [matAutocomplete]="auto" placeholder="Entrez vos compétences" />
               <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addSkill($event.option.value)">
                 <mat-option *ngFor="let skill of filteredSkills | async" [value]="skill">
-                  {{ skill }}
+                  {{ skill.comptenceName }}
                 </mat-option>
               </mat-autocomplete>
             </mat-form-field>
@@ -63,7 +63,7 @@
             <!-- Liste des compétences sélectionnées -->
             <div class="selected-skills">
               <button *ngFor="let skill of selectedSkills" mat-raised-button class="selected-skill" (click)="removeSkill(skill)">
-                {{ skill }}
+                {{ skill.comptenceName }}
                 <mat-icon>cancel</mat-icon>
               </button>
             </div>
@@ -74,7 +74,7 @@
               <input matInput [formControl]="learningSkillsControl" [matAutocomplete]="autoLearn" placeholder="Entrez les compétences que vous souhaitez apprendre" />
               <mat-autocomplete #autoLearn="matAutocomplete" (optionSelected)="addLearningSkill($event.option.value)">
                 <mat-option *ngFor="let skill of filteredLearningSkills | async" [value]="skill">
-                  {{ skill }}
+                  {{ skill.comptenceName }}
                 </mat-option>
               </mat-autocomplete>
             </mat-form-field>
@@ -82,7 +82,7 @@
             <!-- Liste des compétences que l'utilisateur souhaite apprendre -->
             <div class="selected-skills">
               <button *ngFor="let skill of learningSkills" mat-raised-button class="selected-skill" (click)="removeLearningSkill(skill)">
-                {{ skill }}
+                {{ skill. comptenceName }}
                 <mat-icon>cancel</mat-icon>
               </button>
             </div>
