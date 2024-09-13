@@ -8,13 +8,27 @@
   margin-top: 60px;
 }
 
+.top-section {
+  display: flex;
+  align-items: center; /* Aligner verticalement les éléments */
+  justify-content: space-between; /* Espace entre le logo et le bouton */
+  padding: 10px 20px; /* Ajoute un peu de padding autour */
+  height: 93px; /* Hauteur pour le conteneur */
+  width: 100%; /* Largeur de la barre latérale */
+}
+
+/* Style de la section du logo */
+.logo-section img {
+  width: 193px; /* Largeur du logo */
+  height: 93px; /* Hauteur du logo */
+}
 /* Barre de recherche et bouton filtre */
 .search-filter-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 800px; /* Ajuste selon tes besoins */
+  max-width: 900px; /* Ajuste selon tes besoins */
   margin-bottom: 20px;
 }
 
@@ -41,7 +55,7 @@
 
 /* Carte de compétence */
 .competence-card {
-  width: 400px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Pour espacer le footer en bas */
@@ -90,6 +104,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: auto;
+
 }
 
 .card-footer mat-icon {

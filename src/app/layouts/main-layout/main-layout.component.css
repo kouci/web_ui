@@ -1,0 +1,9 @@
+/* Style du contenu principal */
+.main-content {
+  transition: margin-left 0.3s ease;
+  padding: 20px; /* Ajoute un padding pour le contenu */
+}
+
+.main-content.collapsed {
+  margin-left: 60px; 
+}

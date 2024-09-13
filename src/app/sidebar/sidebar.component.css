@@ -1,6 +1,6 @@
 /* Style de la barre latérale */
 .sidebar {
-  width: 250px;
+  width: 250px; /* Largeur par défaut */
   height: 100vh;
   background-color: #1e1e2f;
   color: #fff;
@@ -16,20 +16,11 @@
   transition: all 0.3s ease;
 }
 
-/* Style de la section logo */
-.logo-section {
-  text-align: center;
-  margin-bottom: 30px;
+.sidebar.collapsed {
+  width: 60px; /* Largeur réduite pour afficher seulement les icônes */
+  padding: 20px 5px; /* Réduit l'espace intérieur */
 }
 
-.logo-section h2 {
-  color: #fff;
-  font-size: 1.8rem;
-  margin: 0;
-  font-weight: bold;
-}
-
-/* Style des liens de navigation */
 .nav-links {
   list-style: none;
   padding: 0;
@@ -60,6 +51,15 @@
   font-size: 1.5rem;
 }
 
+.sidebar.collapsed .nav-links li a {
+  justify-content: center; /* Centre les icônes */
+  padding: 10px 0; /* Réduit le padding autour des icônes */
+}
+
+.sidebar.collapsed .nav-links li a span {
+  display: none; /* Masque le texte lorsque la barre latérale est rétractée */
+}
+
 /* Style pour l'état actif des liens */
 .nav-links li a.active-link,
 .nav-links li a:hover {
@@ -67,17 +67,21 @@
   transform: translateX(10px);
 }
 
+.sidebar.collapsed .nav-links li a.active-link,
+.sidebar.collapsed .nav-links li a:hover {
+  transform: none; /* Désactive la translation quand la barre est réduite */
+}
+
 /* Style de la section déconnexion */
 .logout-section {
   margin-top: auto;
-  padding-top: 20px;
   border-top: 1px solid #29293d;
+  padding-top: 20px;
 }
 
 .logout-section a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
   padding: 10px 15px;
   border-radius: 5px;
   display: flex;
@@ -86,15 +90,13 @@
   transition: all 0.3s ease;
 }
 
-.logout-section a mat-icon {
-  font-size: 1.5rem;
+.sidebar.collapsed .logout-section a {
+  justify-content: center; /* Centre les icônes de déconnexion */
+  padding: 10px 0; /* Réduit le padding autour des icônes */
 }
 
-/* Style pour l'état actif du lien de déconnexion */
-.logout-section a.active-link,
-.logout-section a:hover {
-  background-color: #29293d;
-  transform: translateX(10px);
+.logout-section a mat-icon {
+  font-size: 1.5rem;
 }
 
 /* Pied de page de la barre latérale */
@@ -103,4 +105,35 @@
   font-size: 0.9rem;
   text-align: center;
   color: #aaa;
+}
+
+.sidebar.collapsed .sidebar-footer {
+  display: none; /* Masque le pied de page lorsque la barre latérale est rétractée */
+}
+
+.toggle-button {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.toggle-button button {
+  color: #fff;
+}
+
+.logo-section {
+  width: 150px;
+  height: 10px;
+  margin-bottom: 42px;
+}
+
+.logo-section img {
+  width: 200px;
+  height: 150px;
+
+}
+
+.logo_section_header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,11 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  constructor(private router : Router){}
+  isCollapsed = false;  // Etat initial de la barre latérale
 
-  logout(){
+  constructor(private router: Router) {}
+
+  toggleSidebar() {
+    this.isCollapsed = !this.isCollapsed;
+  }
+
+  logout() {
     localStorage.removeItem("token");
     this.router.navigate(["/login"]);
   }
-
 }

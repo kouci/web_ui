@@ -1,57 +1,70 @@
-<nav class="sidebar">
-  <!-- Logo en haut -->
-  <div class="logo-section">
-    <h2>SHARY</h2>
+<nav class="sidebar" [class.collapsed]="isCollapsed">
+
+  <div class="logo_section_header">
+  <div class="logo-section" *ngIf="!isCollapsed">
+    <img src="assets/SHARY.png" alt="SHARY" />
   </div>
+  <div class="toggle-button">
+    <button mat-icon-button (click)="toggleSidebar()">
+      <!-- Utilisation des chevrons pour indiquer l'ouverture/fermeture -->
+      <mat-icon>{{ isCollapsed ? 'chevron_right' : 'chevron_left' }}</mat-icon>
+    </button>
+  </div>
+</div>
+
+  <!-- Logo en haut -->
+
 
   <!-- Navigation au milieu -->
   <ul class="nav-links">
     <li>
       <a routerLink="/dashboard" routerLinkActive="active-link">
         <mat-icon>dashboard</mat-icon>
-        <span>Dashboard</span>
+        <span *ngIf="!isCollapsed">Dashboard</span>
       </a>
     </li>
     <li>
       <a routerLink="/profil" routerLinkActive="active-link">
         <mat-icon>account_circle</mat-icon>
-        <span>Profil</span>
+        <span *ngIf="!isCollapsed">Profil</span>
       </a>
     </li>
     <li>
       <a routerLink="/calendar" routerLinkActive="active-link">
         <mat-icon>event</mat-icon>
-        <span>Calendrier</span>
+        <span *ngIf="!isCollapsed">Calendrier</span>
       </a>
     </li>
     <li>
       <a routerLink="/competences" routerLinkActive="active-link">
         <mat-icon>psychology</mat-icon>
-        <span>Compétence</span>
+        <span *ngIf="!isCollapsed">Compétence</span>
       </a>
     </li>
     <li>
       <a routerLink="/favorites" routerLinkActive="active-link">
         <mat-icon>favorite</mat-icon>
-        <span>Favoris</span>
+        <span *ngIf="!isCollapsed">Favoris</span>
       </a>
     </li>
     <li>
       <a routerLink="/settings" routerLinkActive="active-link">
         <mat-icon>settings</mat-icon>
-        <span>Paramètres</span>
+        <span *ngIf="!isCollapsed">Paramètres</span>
+      </a>
+    </li>
+
+    <!-- Déconnexion en bas -->
+    <li class="logout-section">
+      <a (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span *ngIf="!isCollapsed">Déconnecter</span>
       </a>
     </li>
   </ul>
 
-  <!-- Déconnexion en bas -->
-  <div class="logout-section" (click)="logout()">
-    <mat-icon>logout</mat-icon>
-    <span>Déconnecter</span>
-  </div>
-
   <!-- Pied de page de la barre latérale -->
-  <div class="sidebar-footer">
+  <div class="sidebar-footer" *ngIf="!isCollapsed">
     <p>© 2024 SHARY. All rights reserved.</p>
   </div>
 </nav>
