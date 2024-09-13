@@ -32,16 +32,17 @@ import { EditSkillsDialogComponent } from './edit-skills-dialog/edit-skills-dial
 import { SettingsComponent } from './settings/settings.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CompetencesComponent } from './competences/competences.component';
 import { MatchsComponent } from './matchs/matchs.component';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
 
 import { MatMenuModule } from '@angular/material/menu';
+import { CompetenceDetailComponent } from './competence-detail/competence-detail.component';
 
 
 
@@ -60,6 +61,7 @@ import { MatMenuModule } from '@angular/material/menu';
     SettingsComponent,
     CompetencesComponent,
     MatchsComponent,
+    CompetenceDetailComponent,
 
   ],
   imports: [
@@ -69,6 +71,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatButtonModule,
     MatSlideToggleModule,
     MatTableModule,
+    MatPaginatorModule,
     MatChipsModule,
     MatInputModule,
     MatDialogModule,

@@ -1,0 +1,85 @@
+<div class="container_profil">
+
+  <h2 class="title_card_section">
+    <mat-icon>school</mat-icon> JavaScript React - Développeur Front-End
+  </h2>
+  <mat-card class="profile-card">
+    <mat-card-header>
+      <!-- Icône de modification -->
+      <button mat-icon-button class="edit-button" (click)="openEditDialog()">
+        <mat-icon color="primary">post_add</mat-icon>
+      </button>
+
+      <!-- Avatar de l'utilisateur -->
+      <div mat-card-avatar class="profile-avatar">
+        <mat-icon>account_circle</mat-icon>
+      </div>
+
+      <!-- Informations de l'utilisateur -->
+      <mat-card-title>{{ user?.name }}</mat-card-title>
+      <mat-card-subtitle>{{ user?.email }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <!-- Section des informations de profil -->
+      <section class="profile-section">
+        <p><strong>Nom : </strong> {{ user?.name }}</p>
+        <p><strong>Email : </strong> {{ user?.email }}</p>
+        <p><strong>LinkedIn : </strong><a href="{{ user?.linkedin }}" target="_blank">{{ user?.linkedin }}</a></p>
+      </section>
+    </mat-card-content>
+  </mat-card>
+
+  <h2 class="title_card_section">
+    <mat-icon>bar_chart</mat-icon> Statistiques de Formation
+  </h2>
+  <mat-card class="stats-card">
+    <mat-card-header></mat-card-header>
+
+    <mat-card-content>
+      <section class="stats-section">
+        <div class="stats-item">
+          <mat-icon>access_time</mat-icon>
+          <p>
+            <strong>Nombre d'heures passées en formation :</strong>
+            {{ user?.trainingHours }} heures
+          </p>
+        </div>
+        <div class="stats-item">
+          <mat-icon>track_changes</mat-icon>
+          <p>
+            <strong>Nombre de matchs de compétences :</strong>
+            {{ user?.skillMatches }}
+          </p>
+        </div>
+      </section>
+    </mat-card-content>
+  </mat-card>
+
+  <h2 class="title_card_section">
+    <mat-icon class="match-icon">compare_arrows</mat-icon>Compétences matchées
+  </h2>
+  <mat-card class="skills-card">
+    <mat-card-content>
+      <section class="skills-section">
+        <div class="selected-skills">
+          <!-- Boutons pour chaque compétence maîtrisée -->
+          <button
+            *ngFor="let skill of user?.skills"
+            mat-raised-button
+            class="selected-skill"
+          >
+            {{ skill }}
+          </button>
+        </div>
+        <!-- Bouton de modification des compétences -->
+        <button
+          mat-icon-button
+          class="edit-button"
+          (click)="openEditSkillsDialog()"
+        >
+        </button>
+      </section>
+    </mat-card-content>
+  </mat-card>
+</div>

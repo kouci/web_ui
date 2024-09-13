@@ -109,4 +109,26 @@
 
 .card-footer mat-icon {
   font-size: 24px; /* Taille de l'icône de cœur */
+  margin: 8px;
+}
+
+mat-paginator {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.section_auteur {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.title_card_section {
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }

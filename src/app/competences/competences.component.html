@@ -5,7 +5,7 @@
   <div class="search-filter-bar">
     <mat-form-field appearance="outline" class="search-bar">
       <mat-label>Rechercher des compétences</mat-label>
-      <input matInput placeholder="Rechercher" [(ngModel)]="searchQuery">
+      <input matInput placeholder="Rechercher" [(ngModel)]="searchQuery" />
       <button mat-icon-button matSuffix aria-label="Search">
         <mat-icon>search</mat-icon>
       </button>
@@ -17,48 +17,88 @@
   </div>
 
   <!-- Section pour les compétences recherchées -->
+  <h2 class="title_card_section">
+    <mat-icon>school</mat-icon> <!-- Icône pour les compétences -->
+    Compétences recherchées
+  </h2>
   <div class="competences-section">
-    <h3>Compétences Recherchées</h3>
     <div class="competences-cards">
-      <mat-card *ngFor="let competence of competencesRecherchees" class="competence-card">
+      <mat-card
+        *ngFor="let competence of pagedCompetencesRecherchees"
+        class="competence-card"
+        [routerLink]="['/competence', competence.id]"
+      >
         <mat-card-header class="card-header-competences">
           <mat-card-title>{{ competence.titre }}</mat-card-title>
-          <mat-icon class="match-icon" color="primary">compare_arrows</mat-icon>
+          <mat-icon class="match-icon" color="primary">post_add</mat-icon>
         </mat-card-header>
 
-        <div mat-card-avatar class="profile-avatar">
-          <mat-icon>account_circle</mat-icon>
-        </div>
+        <div class="section_auteur">
+          <div mat-card-avatar class="profile-avatar">
+            <mat-icon>account_circle</mat-icon>
+          </div>
 
-        <mat-card-content>
-          <mat-card-subtitle>{{ competence.auteur }}</mat-card-subtitle>
-        </mat-card-content>
+          <mat-card-content>
+            <mat-card-subtitle>{{ competence.auteur }}</mat-card-subtitle>
+          </mat-card-content>
+        </div>
 
         <mat-card-footer class="card-footer">
           <mat-icon color="primary">favorite_border</mat-icon>
         </mat-card-footer>
       </mat-card>
     </div>
+
+    <!-- Pagination pour les compétences recherchées -->
+    <mat-paginator
+      #paginatorRecherchees
+      [length]="competencesRecherchees.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[4]"
+      aria-label="Select page"
+    ></mat-paginator>
   </div>
 
   <!-- Section pour les compétences disponibles -->
+  <h2 class="title_card_section">
+    <mat-icon>school</mat-icon> <!-- Icône pour les compétences -->
+    Compétences similaires
+  </h2>
   <div class="competences-section">
-    <h3>Compétences Disponibles</h3>
     <div class="competences-cards">
-      <mat-card *ngFor="let competence of competencesDisponibles" class="competence-card">
+      <mat-card
+        *ngFor="let competence of pagedCompetencesDisponibles"
+        class="competence-card"
+        [routerLink]="['/competence', competence.id]"
+      >
         <mat-card-header class="card-header-competences">
           <mat-card-title>{{ competence.titre }}</mat-card-title>
-          <mat-icon class="match-icon" color="primary">compare_arrows</mat-icon>
+          <mat-icon class="match-icon" color="primary">post_add</mat-icon>
         </mat-card-header>
 
-        <mat-card-content>
-          <mat-card-subtitle>Auteur : {{ competence.auteur }}</mat-card-subtitle>
-        </mat-card-content>
+        <div class="section_auteur">
+          <div mat-card-avatar class="profile-avatar">
+            <mat-icon>account_circle</mat-icon>
+          </div>
+
+          <mat-card-content>
+            <mat-card-subtitle>{{ competence.auteur }}</mat-card-subtitle>
+          </mat-card-content>
+        </div>
 
         <mat-card-footer class="card-footer">
           <mat-icon color="primary">favorite_border</mat-icon>
         </mat-card-footer>
       </mat-card>
     </div>
+
+    <!-- Pagination pour les compétences disponibles -->
+    <mat-paginator
+      #paginatorDisponibles
+      [length]="competencesDisponibles.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[4]"
+      aria-label="Select page"
+    ></mat-paginator>
   </div>
 </div>

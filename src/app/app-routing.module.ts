@@ -9,6 +9,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { SettingsComponent } from './settings/settings.component';
 import { CompetencesComponent } from './competences/competences.component';
 import { MatchsComponent } from './matchs/matchs.component';
+import { CompetenceDetailComponent } from './competence-detail/competence-detail.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'profil', component: ProfilComponent },
       { path: 'settings', component: SettingsComponent },
+      { path: 'competence/:id', component: CompetenceDetailComponent },
       { path: 'competences', component: CompetencesComponent },
       { path: 'matchs', component: MatchsComponent },
       // Ajoute ici d'autres routes nécessitant le MainLayout
