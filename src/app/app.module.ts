@@ -35,6 +35,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http'; 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CompetencesComponent } from './competences/competences.component';
+import { MatchsComponent } from './matchs/matchs.component';
+
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
+import { MatMenuModule } from '@angular/material/menu';
 
 
 
@@ -52,6 +59,7 @@ import { CompetencesComponent } from './competences/competences.component';
     EditSkillsDialogComponent,
     SettingsComponent,
     CompetencesComponent,
+    MatchsComponent,
 
   ],
   imports: [
@@ -75,7 +83,10 @@ import { CompetencesComponent } from './competences/competences.component';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],

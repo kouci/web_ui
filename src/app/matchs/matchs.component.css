@@ -1,0 +1,82 @@
+/* Container principal */
+.matchs-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 170px;
+    margin-top: 60px;
+}
+
+/* Section des matchs */
+.matchs-section {
+    margin-bottom: 40px;
+}
+
+/* Conteneur des matchs */
+.matchs-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centrer les cartes */
+}
+
+/* Carte de match */
+.matchs-card {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pour espacer le footer en bas */
+}
+
+/* En-tête de carte */
+.card-header-matchs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Contenu de l'en-tête */
+.card-header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacement entre l'icône et le texte */
+}
+
+/* Icône du profil */
+.text-competences {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Espacement à droite de l'icône */
+    gap: 8px; /* Adds space between the icon and text */
+    padding: 8px; /* Adjusts padding if necessary */
+}
+
+.text-competences mat-icon {
+    font-size: 24px; /* Adjust the size of the icon */
+}
+
+/* Pied de carte */
+.card-footer {
+    display: flex;
+    justify-content: space-between; /* Adjust to space between content */
+    align-items: center; /* Align items vertically center */
+    margin-top: auto;
+}
+
+/* Menu container */
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu button styles */
+.menu-container mat-icon {
+    font-size: 24px;
+}
+
+/* Menu items */
+.mat-menu-item {
+    font-size: 14px; /* Adjust font size if needed */
+}
