@@ -17,6 +17,7 @@ export class SidebarComponent {
 
   logout() {
     localStorage.removeItem("token");
+    localStorage.removeItem("id");
     this.router.navigate(["/login"]);
   }
 }

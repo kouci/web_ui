@@ -1,5 +1,6 @@
 <!-- Carte de profil -->
 <div class="container_profil">
+  {{ user | json}}
   <h2 class="title_card_section">
     <mat-icon>person</mat-icon> <!-- Icône pour les informations personnelles -->
     Informations personnelle
@@ -18,16 +19,16 @@
       </div>
 
       <!-- Informations de l'utilisateur -->
-      <mat-card-title>{{ user.name }}</mat-card-title>
+      <mat-card-title>{{ user.username }}</mat-card-title>
       <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
     </mat-card-header>
 
     <mat-card-content>
       <!-- Section des informations de profil -->
       <section class="profile-section">
-        <p><strong>Nom : </strong> {{ user.name }}</p>
+        <p><strong>Nom : </strong> {{ user.username }}</p>
         <p><strong>Email : </strong> {{ user.email }}</p>
-        <p><strong>LinkedIn : </strong>http://lien/user/profile/667898</p>
+        <p><strong>LinkedIn : </strong> {{ user.linkedin }}</p>
       </section>
     </mat-card-content>
   </mat-card>
@@ -37,14 +38,14 @@
     <mat-icon>bar_chart</mat-icon> <!-- Icône pour les statistiques -->
     Statistiques de Formation
   </h2>
-  <mat-card class="stats-card">
+  <!--<mat-card class="stats-card">
     <mat-card-header> </mat-card-header>
 
     <mat-card-content>
       <section class="stats-section">
         <div class="stats-item">
           <mat-icon>access_time</mat-icon>
-          <!-- Icône d'horloge -->
+        
           <p>
             <strong>Nombre d'heures passées en formation :</strong>
             {{ user.trainingHours }} heures
@@ -52,7 +53,7 @@
         </div>
         <div class="stats-item">
           <mat-icon>track_changes</mat-icon>
-          <!-- Icône de graphique -->
+          
           <p>
             <strong>Nombre de matchs de compétences :</strong>
             {{ user.skillMatches }}
@@ -60,7 +61,7 @@
         </div>
       </section>
     </mat-card-content>
-  </mat-card>
+  </mat-card> -->
 
   <h2 class="title_card_section">
     <mat-icon>school</mat-icon> <!-- Icône pour les compétences -->
@@ -72,11 +73,11 @@
         <div class="selected-skills">
           <!-- Boutons pour chaque compétence maîtrisée -->
           <button
-            *ngFor="let skill of user.skills"
+            *ngFor="let skill of user.competences"
             mat-raised-button
             class="selected-skill"
           >
-            {{ skill }}
+            {{ skill.comptenceName }}
           </button>
         </div>
         <!-- Bouton de modification des compétences -->
@@ -102,11 +103,11 @@
         <div class="selected-skills">
           <!-- Boutons pour chaque compétence maîtrisée -->
           <button
-            *ngFor="let skill of user.skills"
+            *ngFor="let skill of user.wantedCompetences"
             mat-raised-button
             class="selected-skill"
           >
-            {{ skill }}
+            {{ skill.comptenceName }}
           </button>
         </div>
         <!-- Bouton de modification des compétences -->
@@ -114,7 +115,7 @@
         <button
           mat-icon-button
           class="edit-button"
-          (click)="openEditSkillsDialog()"
+          (click)="openEditWantedSkillsDialog()"
         >
           <mat-icon>edit</mat-icon>
         </button>

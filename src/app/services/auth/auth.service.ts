@@ -38,4 +38,30 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('jwt');
   }
+
+  changePassword(oldPassword : string, newPassword: string): Observable<any>{
+    const body = {
+      id: localStorage.getItem("id"),
+      oldPassword: oldPassword,
+      newPassword: newPassword,
+    }
+    const headers = this.getAuthHeaders();
+    const url = this.apiUrl + "change-password";
+
+    return this.http.post(url, body, {headers})
+  }
+
+
+   // Fonction pour récupérer le token depuis le localStorage
+   private getToken(): string | null {
+    return localStorage.getItem('token');
+  }
+
+  // Fonction pour créer les en-têtes avec le token
+  private getAuthHeaders(): HttpHeaders {
+    const token = this.getToken();
+    return new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+  }
 }

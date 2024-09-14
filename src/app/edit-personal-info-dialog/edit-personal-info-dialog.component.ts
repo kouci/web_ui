@@ -22,7 +22,6 @@ export class EditPersonalInfoDialogComponent {
   }
 
   onSave(): void {
-    // Ajouter la logique pour enregistrer les modifications ici
     this.dialogRef.close(this.user);
   }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth/auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar'; 
 
 @Component({
   selector: 'app-settings',
@@ -22,7 +24,9 @@ export class SettingsComponent implements OnInit {
   ];
   displayedColumns: string[] = ['name', 'action'];
 
-  constructor() { }
+  constructor(private authService: AuthService,
+              private snackBar: MatSnackBar,
+  ) { }
 
   ngOnInit(): void {
     // Initialisez les valeurs par défaut si nécessaire
@@ -37,7 +41,24 @@ export class SettingsComponent implements OnInit {
 
   changePassword(): void {
     if (this.newPassword === this.confirmNewPassword) {
-      // Logique pour mettre à jour le mot de passe
+      this.authService.changePassword(this.oldPassword, this.newPassword).subscribe(
+        response => {
+          this.snackBar.open('Le mot de pase à été modifié', 'Fermer', {
+            duration: 30000,
+            horizontalPosition: 'center',
+            verticalPosition: 'top',
+            panelClass: ['snackbar-success']
+          });     
+        },
+        error =>{
+          this.snackBar.open("Le mot de passe n'a pas pu être modifié", 'Fermer', {
+            duration: 30000,
+            horizontalPosition: 'center',
+            verticalPosition: 'top',
+            panelClass: ['snackbar-error']
+          });
+        }
+      )
       console.log('Mot de passe modifié');
     } else {
       console.log('Les mots de passe ne correspondent pas');

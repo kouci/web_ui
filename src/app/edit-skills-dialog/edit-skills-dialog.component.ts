@@ -3,6 +3,8 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { SharyBackendService } from '../services/shary-backend/shary-backend.service';
+import { Competence } from '../models/competence-data.model';
 
 @Component({
   selector: 'app-edit-skills-dialog',
@@ -11,34 +13,43 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class EditSkillsDialogComponent {
   skillControl = new FormControl('');
-  filteredSkills: Observable<string[]>;
-  allSkills: string[] = ['Angular', 'TypeScript', 'JavaScript', 'Python', 'Machine Learning'];
-  userSkills: string[]; // Liste des compétences actuelles de l'utilisateur
+  filteredSkills: Observable<Competence[]>;
+  allSkills: Competence[] = [];
+  userSkills: Competence[]; // Liste des compétences actuelles de l'utilisateur
 
   constructor(
     public dialogRef: MatDialogRef<EditSkillsDialogComponent>,
+    private sharyBackendService: SharyBackendService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.userSkills = data.skills;
+    this.loadSkills();
     this.filteredSkills = this.skillControl.valueChanges.pipe(
       startWith(''),
-      map((value) => this._filter(value || ''))
+      map(value => this._filter(value || ''))
     );
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    return this.allSkills.filter((skill) => skill.toLowerCase().includes(filterValue));
+  private loadSkills(): void {
+    // Charger toutes les compétences disponibles depuis le service
+    this.sharyBackendService.getAllCompetences().subscribe(skills => {
+      this.allSkills = skills;
+    });
   }
 
-  addSkill(skill: string): void {
+  private _filter(value: string): Competence[] {
+    const filterValue = value.toLowerCase();
+    return this.allSkills.filter(skill => skill.comptenceName.toLowerCase().includes(filterValue));
+  }
+
+  addSkill(skill: Competence): void {
     if (skill && !this.userSkills.includes(skill)) {
       this.userSkills.push(skill);
     }
     this.skillControl.setValue('');
   }
 
-  removeSkill(skill: string): void {
+  removeSkill(skill: Competence): void {
     const index = this.userSkills.indexOf(skill);
     if (index >= 0) {
       this.userSkills.splice(index, 1);

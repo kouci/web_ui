@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
           // Si l'authentification réussit
           if(response.jwt){
             localStorage.setItem("token", response.jwt)
+            localStorage.setItem("id", response.id)
           }
           this.snackBar.open('Connexion réussie', 'Fermer', {
             duration: 3000,

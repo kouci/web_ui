@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   skillsForm!: FormGroup;
   skillsControl = new FormControl('');
   learningSkillsControl = new FormControl('');
-  selectedSkills: Competence[] = []; // Utilisation d'objets Competence au lieu de string
+  selectedSkills: Competence[] = []; 
   learningSkills: Competence[] = [];
   filteredSkills: Observable<Competence[]> = of([]);
   filteredLearningSkills: Observable<Competence[]> = of([]);
@@ -28,7 +28,9 @@ export class RegisterComponent implements OnInit {
   userData: UserData = {
     username: '',
     email: '',
-    password: ''
+    password: '',
+    competences: [],
+    wantedCompetences: []
   };
 
   competences: Competence[] = []; // Tableau de toutes les compétences récupérées
@@ -38,6 +40,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.infoForm = this.fb.group({
       name: ['', Validators.required],
+      linkedin: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required]
@@ -118,6 +121,9 @@ export class RegisterComponent implements OnInit {
       this.userData.username = formValues.name;
       this.userData.email = formValues.email;
       this.userData.password = formValues.password;
+      this.userData.competences = this.selectedSkills;
+      this.userData.wantedCompetences = this.learningSkills;
+      this.userData.linkedin = formValues.linkedin;
 
       this.authService.register(this.userData).subscribe(
         (response) => {
