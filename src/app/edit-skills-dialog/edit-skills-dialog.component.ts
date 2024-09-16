@@ -26,7 +26,7 @@ export class EditSkillsDialogComponent {
     this.loadSkills();
     this.filteredSkills = this.skillControl.valueChanges.pipe(
       startWith(''),
-      map(value => this._filter(value || ''))
+      map(value => this._filter(value))
     );
   }
 
@@ -37,8 +37,8 @@ export class EditSkillsDialogComponent {
     });
   }
 
-  private _filter(value: string): Competence[] {
-    const filterValue = value.toLowerCase();
+  private _filter(value: any): Competence[] {
+    const filterValue = (typeof value === 'string') ? value.toLowerCase() : '';
     return this.allSkills.filter(skill => skill.comptenceName.toLowerCase().includes(filterValue));
   }
 
