@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { UserData } from '../models/user-data.model';
 
 interface Competence {
   id: number;
@@ -24,33 +25,16 @@ interface User {
 })
 export class CompetenceDetailComponent implements OnInit {
   competence: Competence | undefined;
-  user: User | undefined;
+  user!: UserData;
   competences: Competence[] = [];
 
   constructor(private route: ActivatedRoute, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     // Exemple de données fictives
-    this.user = {
-      name: 'John Doe',
-      email: 'john.doe@example.com',
-      linkedin: 'http://lien/user/profile/667898',
-      trainingHours: 120,
-      skillMatches: 15,
-      skills: ['Angular', 'TypeScript', 'JavaScript']
-    };
+    this.user = history.state.user;
 
-    this.competence = {
-      id: Number(this.route.snapshot.paramMap.get('id')),
-      name: 'Compétence Exemple',
-      description: 'Description de la compétence exemple'
-    };
-
-    this.competences = [
-      { id: 1, name: 'Compétence 1' },
-      { id: 2, name: 'Compétence 2' },
-      { id: 3, name: 'Compétence 3' }
-    ];
+    
   }
 
   openEditDialog(): void {
