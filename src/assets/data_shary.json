@@ -1,0 +1,516 @@
+ [{
+        "id": 55,
+        "username": "Anisse",
+        "password": "$2a$10$pgynxbZZQgGKSqrnDbIMi.1v1fK1dPLa1CHtX46DjCKAvqPemMRWu",
+        "email": "test@testtest.com",
+        "linkedin": "anisse",
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 9,
+                "comptenceName": "Swift",
+                "comptenceDescription": "Langage de programmation pour le développement d'applications iOS et macOS.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 8,
+                "comptenceName": "Kotlin",
+                "comptenceDescription": "Langage de programmation principalement utilisé pour le développement Android.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 103,
+        "username": "test3",
+        "password": "$2a$10$K4sJtdzk0lgn7Tt2gJu9xOjDCK9ozXUvYHyWingDD37.Cq91kGSQ2",
+        "email": "test@testtest.com",
+        "linkedin": "test",
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 9,
+                "comptenceName": "Swift",
+                "comptenceDescription": "Langage de programmation pour le développement d'applications iOS et macOS.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 8,
+                "comptenceName": "Kotlin",
+                "comptenceDescription": "Langage de programmation principalement utilisé pour le développement Android.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 203,
+        "username": "Anisse2",
+        "password": "$2a$10$xVqYxc5hxW2TbToP2ZSBUeTcCERJAaoL5leuOUMTmbZ/N5LQVuowe",
+        "email": "anisse.mouddane4@orange.fr",
+        "linkedin": null,
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [],
+        "wantedCompetences": [],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 204,
+        "username": "mainTestt",
+        "password": "$2a$10$ZMH8QBb6mL3wz.11WlTKFumFr6KfbgJB8phT9Y0mzFnhw.65tkmjO",
+        "email": "test@testtest.com",
+        "linkedin": "test",
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 8,
+                "comptenceName": "Kotlin",
+                "comptenceDescription": "Langage de programmation principalement utilisé pour le développement Android.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 20,
+                "comptenceName": "MySQL",
+                "comptenceDescription": "Système de gestion de base de données relationnelle.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 26,
+                "comptenceName": "Kubernetes",
+                "comptenceDescription": "Système d’orchestration pour automatiser le déploiement, la gestion et la mise à l’échelle des conteneurs.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 9,
+                "comptenceName": "Swift",
+                "comptenceDescription": "Langage de programmation pour le développement d'applications iOS et macOS.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 205,
+        "username": "AAnissee",
+        "password": "$2a$10$pEK.YExpha9qdMyB0W0JuuaXxMzJB1PrrWz3t70Yd9KZ3hix11ARa",
+        "email": "test@testtest.com",
+        "linkedin": null,
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 8,
+                "comptenceName": "Kotlin",
+                "comptenceDescription": "Langage de programmation principalement utilisé pour le développement Android.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 11,
+                "comptenceName": "Angular",
+                "comptenceDescription": "Framework JavaScript utilisé pour le développement de front-end d’applications web.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 206,
+        "username": "ynov",
+        "password": "$2a$10$BVscgUU.Be7JwLys4yFia.A7CHILgUinIgUURl3nMbciBeMaEVPQC",
+        "email": "test@testtest.com",
+        "linkedin": "binksss",
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 9,
+                "comptenceName": "Swift",
+                "comptenceDescription": "Langage de programmation pour le développement d'applications iOS et macOS.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 26,
+                "comptenceName": "Kubernetes",
+                "comptenceDescription": "Système d’orchestration pour automatiser le déploiement, la gestion et la mise à l’échelle des conteneurs.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 8,
+                "comptenceName": "Kotlin",
+                "comptenceDescription": "Langage de programmation principalement utilisé pour le développement Android.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 17,
+                "comptenceName": "Flask",
+                "comptenceDescription": "Framework web minimaliste en Python pour les petites applications.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 207,
+        "username": "anissse",
+        "password": "$2a$10$ixT8XWy/QEVsEfQb9YO4F.UfCHkXLvTi4gJDvCgukW42sBClqdLZ6",
+        "email": "test@testtest.com",
+        "linkedin": null,
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 9,
+                "comptenceName": "Swift",
+                "comptenceDescription": "Langage de programmation pour le développement d'applications iOS et macOS.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 26,
+                "comptenceName": "Kubernetes",
+                "comptenceDescription": "Système d’orchestration pour automatiser le déploiement, la gestion et la mise à l’échelle des conteneurs.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 12,
+                "comptenceName": "React",
+                "comptenceDescription": "Bibliothèque JavaScript pour construire des interfaces utilisateur dynamiques.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 13,
+                "comptenceName": "Vue.js",
+                "comptenceDescription": "Framework JavaScript progressif pour construire des interfaces utilisateur.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 19,
+                "comptenceName": "Express.js",
+                "comptenceDescription": "Framework minimaliste pour construire des applications web avec Node.js.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 208,
+        "username": "fin",
+        "password": "$2a$10$16NpY5pgVQVhweJzFnx0YOKX2tFgbLmUmN2LxNdNUcBHgtHSBOm2u",
+        "email": "test@testtest.com",
+        "linkedin": null,
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 8,
+                "comptenceName": "Kotlin",
+                "comptenceDescription": "Langage de programmation principalement utilisé pour le développement Android.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 9,
+                "comptenceName": "Swift",
+                "comptenceDescription": "Langage de programmation pour le développement d'applications iOS et macOS.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 15,
+                "comptenceName": "Spring Boot",
+                "comptenceDescription": "Framework Java pour créer des applications web et des services RESTful.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 209,
+        "username": "linkedin",
+        "password": "$2a$10$4Xp5g1OYGwVvwfjJvIFLSefTAGc/u3jN7OpRJCJHRcaC0THUBLAYS",
+        "email": "test@testtest.com",
+        "linkedin": null,
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 11,
+                "comptenceName": "Angular",
+                "comptenceDescription": "Framework JavaScript utilisé pour le développement de front-end d’applications web.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 9,
+                "comptenceName": "Swift",
+                "comptenceDescription": "Langage de programmation pour le développement d'applications iOS et macOS.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 252,
+        "username": "mbappe",
+        "password": "$2a$10$P2ONAIN92h.oiwZnYM328eSgRRwynZhrfvoO2kfwVSAAyAni.YXO6",
+        "email": "test@testtest.com",
+        "linkedin": "mbappe",
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 8,
+                "comptenceName": "Kotlin",
+                "comptenceDescription": "Langage de programmation principalement utilisé pour le développement Android.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 15,
+                "comptenceName": "Spring Boot",
+                "comptenceDescription": "Framework Java pour créer des applications web et des services RESTful.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 9,
+                "comptenceName": "Swift",
+                "comptenceDescription": "Langage de programmation pour le développement d'applications iOS et macOS.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 16,
+                "comptenceName": "Django",
+                "comptenceDescription": "Framework web Python pour créer des applications rapidement et efficacement.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    },
+    {
+        "id": 253,
+        "username": "kouci",
+        "password": "$2a$10$MaWdYyDQTEkgqo3k3Q7FKO.FiTsUrf1IuHwbdVdTPSQzen6NhubPe",
+        "email": "test@testtest.com",
+        "linkedin": "kouci",
+        "requesterMatch": [],
+        "accepterMatch": [],
+        "roles": [],
+        "competences": [
+            {
+                "comptence_id": 27,
+                "comptenceName": "Jenkins",
+                "comptenceDescription": "Serveur d’automatisation open-source pour l’intégration continue et le déploiement continu.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 15,
+                "comptenceName": "Spring Boot",
+                "comptenceDescription": "Framework Java pour créer des applications web et des services RESTful.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 16,
+                "comptenceName": "Django",
+                "comptenceDescription": "Framework web Python pour créer des applications rapidement et efficacement.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "wantedCompetences": [
+            {
+                "comptence_id": 8,
+                "comptenceName": "Kotlin",
+                "comptenceDescription": "Langage de programmation principalement utilisé pour le développement Android.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            },
+            {
+                "comptence_id": 9,
+                "comptenceName": "Swift",
+                "comptenceDescription": "Langage de programmation pour le développement d'applications iOS et macOS.",
+                "archived": false,
+                "createdAt": "2024-09-12T13:08:02.043+00:00",
+                "updatedAt": "2024-09-12T13:08:02.043+00:00",
+                "categories": []
+            }
+        ],
+        "userLogs": [],
+        "enabled": true,
+        "authorities": [],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true
+    }
+]

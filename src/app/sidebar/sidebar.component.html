@@ -1,26 +1,26 @@
 <nav class="sidebar" [class.collapsed]="isCollapsed">
-
   <div class="logo_section_header">
-  <div class="logo-section" *ngIf="!isCollapsed">
-    <img src="assets/SHARY.png" alt="SHARY" />
+    <div class="logo-section" *ngIf="!isCollapsed">
+      <img src="assets/SHARY.png" alt="SHARY" />
+    </div>
+    <div class="toggle-button">
+      <button mat-icon-button (click)="toggleSidebar()">
+        <!-- Utilisation des chevrons pour indiquer l'ouverture/fermeture -->
+        <mat-icon>{{
+          isCollapsed ? "chevron_right" : "chevron_left"
+        }}</mat-icon>
+      </button>
+    </div>
   </div>
-  <div class="toggle-button">
-    <button mat-icon-button (click)="toggleSidebar()">
-      <!-- Utilisation des chevrons pour indiquer l'ouverture/fermeture -->
-      <mat-icon>{{ isCollapsed ? 'chevron_right' : 'chevron_left' }}</mat-icon>
-    </button>
-  </div>
-</div>
 
   <!-- Logo en haut -->
-
 
   <!-- Navigation au milieu -->
   <ul class="nav-links">
     <li>
-      <a routerLink="/dashboard" routerLinkActive="active-link">
-        <mat-icon>dashboard</mat-icon>
-        <span *ngIf="!isCollapsed">Dashboard</span>
+      <a routerLink="/competences" routerLinkActive="active-link">
+        <mat-icon>psychology</mat-icon>
+        <span *ngIf="!isCollapsed">Compétence</span>
       </a>
     </li>
     <li>
@@ -35,22 +35,11 @@
         <span *ngIf="!isCollapsed">Calendrier</span>
       </a>
     </li>
-    <li>
-      <a routerLink="/competences" routerLinkActive="active-link">
-        <mat-icon>psychology</mat-icon>
-        <span *ngIf="!isCollapsed">Compétence</span>
-      </a>
-    </li>
+
     <li>
       <a routerLink="/matchs" routerLinkActive="active-link">
         <mat-icon>find_replace</mat-icon>
         <span>Mes matchs</span>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/favorites" routerLinkActive="active-link">
-        <mat-icon>favorite</mat-icon>
-        <span *ngIf="!isCollapsed">Favoris</span>
       </a>
     </li>
     <li>

@@ -8,6 +8,40 @@
   margin-top: 60px;
 }
 
+.selected-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+
+.profile-avatar {
+  background-color: #3f51b5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+
+.profile-avatar mat-icon {
+ color: white;
+}
+
+
+
+
+.title_comp {
+  margin-left: 18px;
+  margin-bottom: 25px;
+  font-weight: bold;
+
+}
+
+
 .top-section {
   display: flex;
   align-items: center; /* Aligner verticalement les éléments */

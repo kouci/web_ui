@@ -1,103 +1,56 @@
 <div class="competences-container">
-  <h2>Compétences</h2>
-
   <!-- Barre de recherche et bouton filtre -->
   <div class="search-filter-bar">
     <mat-form-field appearance="outline" class="search-bar">
       <mat-label>Rechercher des compétences</mat-label>
-      <input matInput placeholder="Rechercher" [(ngModel)]="searchQuery" />
+      <input matInput placeholder="Rechercher" [(ngModel)]="searchQuery" (ngModelChange)="filterUsers()" />
       <button mat-icon-button matSuffix aria-label="Search">
         <mat-icon>search</mat-icon>
       </button>
     </mat-form-field>
 
-    <button mat-raised-button color="primary" class="filter-button">
-      <mat-icon>filter_list</mat-icon> Filtrer
-    </button>
+    <mat-slide-toggle class="filter-button" [(ngModel)]="isProfileVisible" color="primary">
+      Profil matches
+    </mat-slide-toggle>
   </div>
 
-  <!-- Section pour les compétences recherchées -->
-  <h2 class="title_card_section">
-    <mat-icon>school</mat-icon> <!-- Icône pour les compétences -->
-    Compétences recherchées
-  </h2>
   <div class="competences-section">
     <div class="competences-cards">
       <mat-card
-        *ngFor="let competence of pagedCompetencesRecherchees"
+        *ngFor="let user of pagedUsers"
         class="competence-card"
-        [routerLink]="['/competence', competence.id]"
+        [routerLink]="['/competence', user.id]"
       >
         <mat-card-header class="card-header-competences">
-          <mat-card-title>{{ competence.titre }}</mat-card-title>
-          <mat-icon class="match-icon" color="primary">post_add</mat-icon>
-        </mat-card-header>
-
-        <div class="section_auteur">
-          <div mat-card-avatar class="profile-avatar">
-            <mat-icon>account_circle</mat-icon>
-          </div>
-
-          <mat-card-content>
-            <mat-card-subtitle>{{ competence.auteur }}</mat-card-subtitle>
-          </mat-card-content>
-        </div>
-
-        <mat-card-footer class="card-footer">
+          <mat-card-title class="title_card_section">
+            <div mat-card-avatar class="profile-avatar">
+              <mat-icon>account_circle</mat-icon>
+            </div>
+            {{ user.username }}
+            <span class="author-name">{{ user.authorName }}</span>
+          </mat-card-title>
           <mat-icon color="primary">favorite_border</mat-icon>
-        </mat-card-footer>
+        </mat-card-header>
+        <h3 class="title_comp">Ces compétences</h3>
+        <mat-card-content>
+          <div class="competence-details">
+            <div class="selected-skills">
+              <button mat-raised-button *ngFor="let skill of user.competences">
+                {{ skill.comptenceName }}
+              </button>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-footer class="card-footer"></mat-card-footer>
       </mat-card>
     </div>
 
-    <!-- Pagination pour les compétences recherchées -->
+    <!-- Pagination pour les utilisateurs -->
     <mat-paginator
       #paginatorRecherchees
-      [length]="competencesRecherchees.length"
+      [length]="users.length"
       [pageSize]="pageSize"
-      [pageSizeOptions]="[4]"
-      aria-label="Select page"
-    ></mat-paginator>
-  </div>
-
-  <!-- Section pour les compétences disponibles -->
-  <h2 class="title_card_section">
-    <mat-icon>school</mat-icon> <!-- Icône pour les compétences -->
-    Compétences similaires
-  </h2>
-  <div class="competences-section">
-    <div class="competences-cards">
-      <mat-card
-        *ngFor="let competence of pagedCompetencesDisponibles"
-        class="competence-card"
-        [routerLink]="['/competence', competence.id]"
-      >
-        <mat-card-header class="card-header-competences">
-          <mat-card-title>{{ competence.titre }}</mat-card-title>
-          <mat-icon class="match-icon" color="primary">post_add</mat-icon>
-        </mat-card-header>
-
-        <div class="section_auteur">
-          <div mat-card-avatar class="profile-avatar">
-            <mat-icon>account_circle</mat-icon>
-          </div>
-
-          <mat-card-content>
-            <mat-card-subtitle>{{ competence.auteur }}</mat-card-subtitle>
-          </mat-card-content>
-        </div>
-
-        <mat-card-footer class="card-footer">
-          <mat-icon color="primary">favorite_border</mat-icon>
-        </mat-card-footer>
-      </mat-card>
-    </div>
-
-    <!-- Pagination pour les compétences disponibles -->
-    <mat-paginator
-      #paginatorDisponibles
-      [length]="competencesDisponibles.length"
-      [pageSize]="pageSize"
-      [pageSizeOptions]="[4]"
+      [pageSizeOptions]="[6]"
       aria-label="Select page"
     ></mat-paginator>
   </div>

@@ -1,60 +1,48 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-competences',
   templateUrl: './competences.component.html',
   styleUrls: ['./competences.component.css'],
 })
-export class CompetencesComponent implements AfterViewInit {
+export class CompetencesComponent implements OnInit, AfterViewInit {
   searchQuery: string = '';
-  competencesRecherchees: any[] = [];
-  competencesDisponibles: any[] = [];
-  pagedCompetencesRecherchees: any[] = [];
-  pagedCompetencesDisponibles: any[] = [];
-  pageSize: number = 4; // Afficher 4 compétences par page
+  users: any[] = [];
+  pagedUsers: any[] = [];
+  pageSize: number = 6;
+  isProfileVisible: boolean = false; // Définir la valeur initiale selon vos besoins
 
   @ViewChild('paginatorRecherchees') paginatorRecherchees!: MatPaginator;
-  @ViewChild('paginatorDisponibles') paginatorDisponibles!: MatPaginator;
+
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.competencesRecherchees = [
-      { id: 1, titre: 'Compétence 1', auteur: 'Auteur 1' },
-      { id: 2, titre: 'Compétence 2', auteur: 'Auteur 2' },
-      { id: 3, titre: 'Compétence 3', auteur: 'Auteur 3' },
-      { id: 4, titre: 'Compétence 4', auteur: 'Auteur 4' },
-      { id: 5, titre: 'Compétence 5', auteur: 'Auteur 5' },
-      { id: 6, titre: 'Compétence 6', auteur: 'Auteur 6' },
-    ];
-    this.competencesDisponibles = [
-      { id: 7, titre: 'Compétence A', auteur: 'Auteur A' },
-      { id: 8, titre: 'Compétence B', auteur: 'Auteur B' },
-      { id: 9, titre: 'Compétence C', auteur: 'Auteur C' },
-      { id: 10, titre: 'Compétence D', auteur: 'Auteur D' },
-      { id: 11, titre: 'Compétence E', auteur: 'Auteur E' },
-      { id: 12, titre: 'Compétence F', auteur: 'Auteur F' },
-    ];
+    this.http.get<any[]>('assets/data_shary.json').subscribe((data) => {
+      this.users = data;
+      this.paginateUsers();
+    });
   }
 
   ngAfterViewInit() {
-    this.paginateCompetences();
-    this.paginatorRecherchees.page.subscribe(() => this.paginateCompetences());
-    this.paginatorDisponibles.page.subscribe(() => this.paginateCompetences());
+    this.paginatorRecherchees.page.subscribe(() => this.paginateUsers());
   }
 
-  paginateCompetences() {
-    this.pagedCompetencesRecherchees = this.paginate(
-      this.competencesRecherchees,
-      this.paginatorRecherchees
+  filterUsers() {
+    const filteredUsers = this.users.filter((user) =>
+      user.competences.some((skill: any) =>
+        skill.comptenceName.toLowerCase().includes(this.searchQuery.toLowerCase())
+      )
     );
-    this.pagedCompetencesDisponibles = this.paginate(
-      this.competencesDisponibles,
-      this.paginatorDisponibles
-    );
+    this.paginateUsers(filteredUsers);
   }
 
-  paginate(competences: any[], paginator: MatPaginator): any[] {
-    const startIndex = paginator.pageIndex * paginator.pageSize;
-    return competences.slice(startIndex, startIndex + paginator.pageSize);
+  paginateUsers(filteredUsers: any[] = this.users) {
+    const startIndex = this.paginatorRecherchees.pageIndex * this.paginatorRecherchees.pageSize;
+    this.pagedUsers = filteredUsers.slice(
+      startIndex,
+      startIndex + this.paginatorRecherchees.pageSize
+    );
   }
 }

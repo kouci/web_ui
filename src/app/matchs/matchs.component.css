@@ -1,82 +1,113 @@
 /* Container principal */
-.matchs-container {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 170px;
-    margin-top: 60px;
+.competences-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 220px;
+  margin-top: 60px;
 }
 
-/* Section des matchs */
-.matchs-section {
-    margin-bottom: 40px;
+
+.competences-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 170px;
+  margin-top: 60px;
 }
 
-/* Conteneur des matchs */
-.matchs-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; /* Centrer les cartes */
+/* Section des compétences */
+.competences-section {
+  margin-bottom: 40px;
 }
 
-/* Carte de match */
-.matchs-card {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Pour espacer le footer en bas */
+/* Conteneur des cartes */
+.competences-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centrer les cartes */
+}
+
+/* Carte de compétence */
+.competence-card {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pour espacer le footer en bas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère pour les cartes */
+  border-radius: 8px; /* Bords arrondis pour les cartes */
+  transition: transform 0.2s ease; /* Effet de zoom au survol */
+}
+
+.competence-card:hover {
+  transform: scale(1.02); /* Zoom au survol */
 }
 
 /* En-tête de carte */
-.card-header-matchs {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Contenu de l'en-tête */
-.card-header-content {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espacement entre l'icône et le texte */
+.card-header-competences {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
 }
 
 /* Icône du profil */
-.text-competences {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px; /* Espacement à droite de l'icône */
-    gap: 8px; /* Adds space between the icon and text */
-    padding: 8px; /* Adjusts padding if necessary */
+.profile-avatar {
+  background-color: #3f51b5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 40px; /* Taille de l'icône de l'auteur */
+  margin-right: 10px; /* Espacement à droite de l'icône */
 }
 
-.text-competences mat-icon {
-    font-size: 24px; /* Adjust the size of the icon */
+/* Titre de la carte */
+.title_comp {
+  margin-left: 18px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* Détails des compétences */
+.selected-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
 /* Pied de carte */
 .card-footer {
-    display: flex;
-    justify-content: space-between; /* Adjust to space between content */
-    align-items: center; /* Align items vertically center */
-    margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
 }
 
-/* Menu container */
-.menu-container {
-    display: flex;
-    align-items: center;
+.card-footer mat-icon {
+  font-size: 24px; /* Taille de l'icône */
+  margin: 8px;
 }
 
-/* Menu button styles */
-.menu-container mat-icon {
-    font-size: 24px;
+/* Pagination */
+mat-paginator {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 
-/* Menu items */
-.mat-menu-item {
-    font-size: 14px; /* Adjust font size if needed */
+/* Titre de l'en-tête de carte */
+.title_card_section {
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }

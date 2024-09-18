@@ -1,35 +1,48 @@
-<div class="matchs-container">
-    <h2>Vos matchs</h2>
-    <div class="matchs-section">
-      <div class="matchs-cards">
-        <mat-card *ngFor="let match of matchesUser" class="matchs-card">
-          <mat-card-header class="card-header-matchs">
-            <mat-card-title>{{ match.prenom }} {{ match.nom }}</mat-card-title>
-          </mat-card-header>
-  
-          <div mat-card-avatar class="text-competences">
-            <mat-icon>psychology</mat-icon>
-            <span>{{ match.competences_communes }}</span>
+<div class="competences-container ">
+<div class="competences-section">
+  <div class="competences-cards">
+    <mat-card
+      *ngFor="let user of pagedUsers"
+      class="competence-card"
+      [routerLink]="['/competence', user.id]"
+    >
+      <mat-card-header class="card-header-competences">
+        <mat-card-title class="title_card_section">
+          <div mat-card-avatar class="profile-avatar">
+            <mat-icon>account_circle</mat-icon>
+            <!-- Icône de bonhomme -->
           </div>
-  
-          <mat-card-footer class="card-footer">
-            <mat-form-field>
-              <input matInput [matDatepicker]="picker" placeholder="Première date">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-  
-            <div class="menu-container">
-              <button mat-icon-button [matMenuTriggerFor]="menu">
-                <mat-icon>update</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu">
-                <button mat-menu-item>Toutes les semaines</button>
-                <button mat-menu-item>Toutes les deux semaines</button>
-              </mat-menu>
-            </div>
-          </mat-card-footer>
-        </mat-card>
-      </div>
-    </div>
+          {{ user.username }}
+          <!-- Optionnel : Ajoute un champ d'auteur si nécessaire -->
+          <span class="author-name">{{ user.authorName }}</span>
+        </mat-card-title>
+        <mat-icon color="primary">favorite_border</mat-icon>
+      </mat-card-header>
+       <h3 class="title_comp"> Ces compténces </h3>
+      <mat-card-content>
+        <div class="competence-details">
+          <div class="selected-skills">
+            <button
+            mat-raised-button
+              *ngFor="let skill of user.competences"
+            >
+              {{ skill.comptenceName }}
+            </button>
+          </div>
+        </div>
+      </mat-card-content>
+
+      <mat-card-footer class="card-footer"></mat-card-footer>
+    </mat-card>
   </div>
+
+  <!-- Pagination pour les utilisateurs -->
+  <mat-paginator
+    #paginatorRecherchees
+    [length]="users.length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[6]"
+    aria-label="Select page"
+  ></mat-paginator>
+</div>
+</div>
