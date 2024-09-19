@@ -1,4 +1,5 @@
 import { Competence } from "./competence-data.model";
+import { MatchData } from "./match-data.model";
 
 export interface UserData {
     username: string;
@@ -7,5 +8,8 @@ export interface UserData {
     competences: Competence[];
     wantedCompetences: Competence[];
     linkedin ?: string;
+    id?: number;
+    likedUsers?: UserData[];
+    accepterMatch?: MatchData[];
   }
   

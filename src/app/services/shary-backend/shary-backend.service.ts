@@ -48,5 +48,21 @@ export class SharyBackendService {
     const headers = this.getAuthHeaders()
     return this.http.put<Response>(url,user, {headers} )
   }
+
+  likeUser(like: Boolean,id: any): Observable<Response>{
+    const url = this.apiUrl + "users/" + localStorage.getItem("id");
+    const headers = this.getAuthHeaders();
+    const body = {
+      like: like,
+      idUserLike: id
+    }
+    return this.http.patch<Response>(url, body, {headers})
+  }
+
+  getAllUsers(): Observable<Array<UserData>>{
+    const url = this.apiUrl + "users";
+    const headers = this.getAuthHeaders();
+    return this.http.get<Array<UserData>>(url, {headers});
+  }
 }
 
