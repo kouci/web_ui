@@ -10,6 +10,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { CompetencesComponent } from './competences/competences.component';
 import { MatchsComponent } from './matchs/matchs.component';
 import { CompetenceDetailComponent } from './competence-detail/competence-detail.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+
 
 const routes: Routes = [
   {
@@ -19,6 +21,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'privacy', component: PrivacyPolicyComponent },
     ],
   },
   {
@@ -31,6 +34,7 @@ const routes: Routes = [
       { path: 'competence/:id', component: CompetenceDetailComponent },
       { path: 'competences', component: CompetencesComponent },
       { path: 'matchs', component: MatchsComponent },
+
       // Ajoute ici d'autres routes nécessitant le MainLayout
     ],
   },

@@ -31,6 +31,7 @@ import { FormsModule } from '@angular/forms';
 import { EditSkillsDialogComponent } from './edit-skills-dialog/edit-skills-dialog.component';
 import { SettingsComponent } from './settings/settings.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -39,12 +40,11 @@ import { MatchsComponent } from './matchs/matchs.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import { CommonModule } from '@angular/common';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { CompetenceDetailComponent } from './competence-detail/competence-detail.component';
-
-
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +62,7 @@ import { CompetenceDetailComponent } from './competence-detail/competence-detail
     CompetencesComponent,
     MatchsComponent,
     CompetenceDetailComponent,
-
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,11 +71,13 @@ import { CompetenceDetailComponent } from './competence-detail/competence-detail
     MatButtonModule,
     MatSlideToggleModule,
     MatTableModule,
+    CommonModule,
     MatPaginatorModule,
     MatChipsModule,
     MatInputModule,
     MatDialogModule,
     FormsModule,
+    MatCheckboxModule,
     MatAutocompleteModule,
     MatCardModule,
     MatFormFieldModule,
@@ -89,7 +91,7 @@ import { CompetenceDetailComponent } from './competence-detail/competence-detail
     MatSnackBarModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatMenuModule
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

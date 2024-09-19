@@ -9,32 +9,72 @@
           <form [formGroup]="infoForm">
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Nom</mat-label>
-              <input matInput formControlName="name" placeholder="Entrez votre nom" required />
+              <input
+                matInput
+                formControlName="name"
+                placeholder="Entrez votre nom"
+                required
+              />
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>LinkedIn</mat-label>
-              <input matInput formControlName="linkedin" placeholder="Entrez votre LinkedIn" required />
+              <input
+                matInput
+                formControlName="linkedin"
+                placeholder="Entrez votre LinkedIn"
+                required
+              />
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Email</mat-label>
-              <input matInput formControlName="email" type="email" placeholder="Entrez votre email" required />
+              <input
+                matInput
+                formControlName="email"
+                type="email"
+                placeholder="Entrez votre email"
+                required
+              />
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Mot de passe</mat-label>
-              <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="password" placeholder="Entrez votre mot de passe" required />
-              <button mat-icon-button matSuffix (click)="togglePasswordVisibility()">
-                <mat-icon>{{ hidePassword ? "visibility_off" : "visibility" }}</mat-icon>
+              <input
+                matInput
+                [type]="hidePassword ? 'password' : 'text'"
+                formControlName="password"
+                placeholder="Entrez votre mot de passe"
+                required
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="togglePasswordVisibility()"
+              >
+                <mat-icon>{{
+                  hidePassword ? "visibility_off" : "visibility"
+                }}</mat-icon>
               </button>
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Confirmer le mot de passe</mat-label>
-              <input matInput [type]="hidePassword ? 'password' : 'text'" formControlName="confirmPassword" placeholder="Confirmez votre mot de passe" required />
-              <button mat-icon-button matSuffix (click)="togglePasswordVisibility()">
-                <mat-icon>{{ hidePassword ? "visibility_off" : "visibility" }}</mat-icon>
+              <input
+                matInput
+                [type]="hidePassword ? 'password' : 'text'"
+                formControlName="confirmPassword"
+                placeholder="Confirmez votre mot de passe"
+                required
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="togglePasswordVisibility()"
+              >
+                <mat-icon>{{
+                  hidePassword ? "visibility_off" : "visibility"
+                }}</mat-icon>
               </button>
               <mat-error *ngIf="infoForm.hasError('mismatch')">
                 Les mots de passe ne correspondent pas.
@@ -42,24 +82,44 @@
             </mat-form-field>
 
             <div class="stepper-actions">
-              <button mat-raised-button color="primary" (click)="stepper.next()" [disabled]="!infoForm.valid">
+              <button
+                mat-raised-button
+                color="primary"
+                (click)="stepper.next()"
+                [disabled]="!infoForm.valid"
+              >
                 Suivant
               </button>
             </div>
           </form>
           <p class="login-prompt">
-            Si vous avez déjà un compte, <a routerLink="/login">connectez-vous</a>
+            Si vous avez déjà un compte,
+            <a routerLink="/login">connectez-vous</a>
           </p>
         </mat-step>
 
         <!-- Étape 2: Renseignement des compétences -->
-        <mat-step label="Renseignement des compétences" [stepControl]="skillsForm">
+        <mat-step
+          label="Renseignement des compétences"
+          [stepControl]="skillsForm"
+        >
           <form [formGroup]="skillsForm">
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Compétences que je possède</mat-label>
-              <input matInput [formControl]="skillsControl" [matAutocomplete]="auto" placeholder="Entrez vos compétences" />
-              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addSkill($event.option.value)">
-                <mat-option *ngFor="let skill of filteredSkills | async" [value]="skill">
+              <input
+                matInput
+                [formControl]="skillsControl"
+                [matAutocomplete]="auto"
+                placeholder="Entrez vos compétences"
+              />
+              <mat-autocomplete
+                #auto="matAutocomplete"
+                (optionSelected)="addSkill($event.option.value)"
+              >
+                <mat-option
+                  *ngFor="let skill of filteredSkills | async"
+                  [value]="skill"
+                >
                   {{ skill.comptenceName }}
                 </mat-option>
               </mat-autocomplete>
@@ -67,7 +127,12 @@
 
             <!-- Liste des compétences sélectionnées -->
             <div class="selected-skills">
-              <button *ngFor="let skill of selectedSkills" mat-raised-button class="selected-skill" (click)="removeSkill(skill)">
+              <button
+                *ngFor="let skill of selectedSkills"
+                mat-raised-button
+                class="selected-skill"
+                (click)="removeSkill(skill)"
+              >
                 {{ skill.comptenceName }}
                 <mat-icon>cancel</mat-icon>
               </button>
@@ -76,9 +141,20 @@
             <!-- Compétences que je cherche à apprendre -->
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Compétences que je cherche à apprendre</mat-label>
-              <input matInput [formControl]="learningSkillsControl" [matAutocomplete]="autoLearn" placeholder="Entrez les compétences que vous souhaitez apprendre" />
-              <mat-autocomplete #autoLearn="matAutocomplete" (optionSelected)="addLearningSkill($event.option.value)">
-                <mat-option *ngFor="let skill of filteredLearningSkills | async" [value]="skill">
+              <input
+                matInput
+                [formControl]="learningSkillsControl"
+                [matAutocomplete]="autoLearn"
+                placeholder="Entrez les compétences que vous souhaitez apprendre"
+              />
+              <mat-autocomplete
+                #autoLearn="matAutocomplete"
+                (optionSelected)="addLearningSkill($event.option.value)"
+              >
+                <mat-option
+                  *ngFor="let skill of filteredLearningSkills | async"
+                  [value]="skill"
+                >
                   {{ skill.comptenceName }}
                 </mat-option>
               </mat-autocomplete>
@@ -86,20 +162,51 @@
 
             <!-- Liste des compétences que l'utilisateur souhaite apprendre -->
             <div class="selected-skills">
-              <button *ngFor="let skill of learningSkills" mat-raised-button class="selected-skill" (click)="removeLearningSkill(skill)">
-                {{ skill. comptenceName }}
+              <button
+                *ngFor="let skill of learningSkills"
+                mat-raised-button
+                class="selected-skill"
+                (click)="removeLearningSkill(skill)"
+              >
+                {{ skill.comptenceName }}
                 <mat-icon>cancel</mat-icon>
               </button>
             </div>
 
+            <!-- Case à cocher pour le consentement RGPD -->
+            <mat-checkbox formControlName="consent" required>
+              Vous devez accepter les conditions pour continuer.
+              <a routerLink="/privacy" target="_blank"
+                >politique de confidentialité</a
+              >.
+            </mat-checkbox>
+
+            <!-- Message d'erreur si le consentement n'est pas donné -->
+            <mat-error
+              *ngIf="
+                skillsForm.get('consent')?.hasError('required') &&
+                skillsForm.get('consent')?.touched
+              "
+            >
+              Vous devez accepter les conditions pour continuer.
+            </mat-error>
+
             <div class="stepper-actions">
-              <button mat-raised-button color="primary" (click)="submit()" [disabled]="!skillsForm.valid">
+              <button
+                mat-raised-button
+                color="primary"
+                (click)="submit()"
+                [disabled]="
+                  !skillsForm.valid || !skillsForm.get('consent')?.value
+                "
+              >
                 Soumettre
               </button>
             </div>
           </form>
           <p class="login-prompt">
-            Si vous avez déjà un compte, <a routerLink="/login">connectez-vous</a>
+            Si vous avez déjà un compte,
+            <a routerLink="/login">connectez-vous</a>
           </p>
         </mat-step>
       </mat-horizontal-stepper>

@@ -1,48 +1,45 @@
-<div class="competences-container ">
-<div class="competences-section">
-  <div class="competences-cards">
-    <mat-card
-      *ngFor="let user of pagedUsers"
-      class="competence-card"
-      [routerLink]="['/competence', user.id]"
-    >
-      <mat-card-header class="card-header-competences">
-        <mat-card-title class="title_card_section">
-          <div mat-card-avatar class="profile-avatar">
-            <mat-icon>account_circle</mat-icon>
-            <!-- Icône de bonhomme -->
+<div class="competences-container">
+  <div class="competences-section">
+    <div class="competences-cards">
+      <mat-card
+        *ngFor="let user of pagedUsers"
+        class="competence-card"
+        [routerLink]="['/competence', user.id]"
+      >
+        <mat-card-header class="card-header-competences">
+          <mat-card-title class="title_card_section">
+            <div mat-card-avatar class="profile-avatar">
+              <mat-icon>account_circle</mat-icon>
+              <!-- Icône de bonhomme -->
+            </div>
+            {{ user.username }}
+            <!-- Optionnel : Ajoute un champ d'auteur si nécessaire -->
+            <span class="author-name">{{ user.authorName }}</span>
+          </mat-card-title>
+          <mat-icon color="primary">favorite_border</mat-icon>
+        </mat-card-header>
+        <h3 class="title_comp">Compténces</h3>
+        <mat-card-content>
+          <div class="competence-details">
+            <div class="selected-skills">
+              <button mat-raised-button *ngFor="let skill of user.competences">
+                {{ skill.comptenceName }}
+              </button>
+            </div>
           </div>
-          {{ user.username }}
-          <!-- Optionnel : Ajoute un champ d'auteur si nécessaire -->
-          <span class="author-name">{{ user.authorName }}</span>
-        </mat-card-title>
-        <mat-icon color="primary">favorite_border</mat-icon>
-      </mat-card-header>
-       <h3 class="title_comp"> Ces compténces </h3>
-      <mat-card-content>
-        <div class="competence-details">
-          <div class="selected-skills">
-            <button
-            mat-raised-button
-              *ngFor="let skill of user.competences"
-            >
-              {{ skill.comptenceName }}
-            </button>
-          </div>
-        </div>
-      </mat-card-content>
+        </mat-card-content>
 
-      <mat-card-footer class="card-footer"></mat-card-footer>
-    </mat-card>
+        <mat-card-footer class="card-footer"></mat-card-footer>
+      </mat-card>
+    </div>
+
+    <!-- Pagination pour les utilisateurs -->
+    <mat-paginator
+      #paginatorRecherchees
+      [length]="users.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[6]"
+      aria-label="Select page"
+    ></mat-paginator>
   </div>
-
-  <!-- Pagination pour les utilisateurs -->
-  <mat-paginator
-    #paginatorRecherchees
-    [length]="users.length"
-    [pageSize]="pageSize"
-    [pageSizeOptions]="[6]"
-    aria-label="Select page"
-  ></mat-paginator>
-</div>
 </div>

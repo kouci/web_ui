@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth/auth.service';
-import { MatSnackBar } from '@angular/material/snack-bar'; 
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-settings',
@@ -48,7 +48,7 @@ export class SettingsComponent implements OnInit {
             horizontalPosition: 'center',
             verticalPosition: 'top',
             panelClass: ['snackbar-success']
-          });     
+          });
         },
         error =>{
           this.snackBar.open("Le mot de passe n'a pas pu être modifié", 'Fermer', {

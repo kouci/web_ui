@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { AuthService } from '../services/auth/auth.service';
 import { UserData } from '../models/user-data.model';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SharyBackendService } from '../services/shary-backend/shary-backend.service';
 import { Competence } from '../models/competence-data.model';
@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   skillsForm!: FormGroup;
   skillsControl = new FormControl('');
   learningSkillsControl = new FormControl('');
-  selectedSkills: Competence[] = []; 
+  selectedSkills: Competence[] = [];
   learningSkills: Competence[] = [];
   filteredSkills: Observable<Competence[]> = of([]);
   filteredLearningSkills: Observable<Competence[]> = of([]);
